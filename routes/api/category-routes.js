@@ -6,10 +6,11 @@ const { Category, Product } = require("../../models");
 router.get("/", async (req, res) => {
   try {
     const someNonesense = await Category.findAll({
-      include: {
-        model: Product,
-        attributes: ["id", "product_name", "price", "stock", "category_id"],
-      },
+      include: [
+        {
+          model: Product,
+        },
+      ],
     });
     res.status(200).json(someNonesense);
   } catch (err) {
@@ -24,7 +25,11 @@ router.get("/:id", async (req, res) => {
   // be sure to include its associated Products
   try {
     const someNonesense = await Category.findByPk(req.params.id, {
-      include: [{ model: Product }],
+      include: [
+        {
+          model: Product,
+        },
+      ],
     });
     if (!someNonesense) {
       res.status(404).json({ message: "No user with this id!" });
