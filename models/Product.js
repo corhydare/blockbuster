@@ -1,3 +1,4 @@
+const bagOFcats = require("./Category");
 // import important parts of sequelize library
 const { Model, DataTypes } = require("sequelize");
 // import our database connection from config.js
@@ -37,7 +38,7 @@ Product.init(
     category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "category",
+        model: bagOFcats,
         key: "id",
       },
     },
