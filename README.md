@@ -37,7 +37,11 @@ nodemon within the directory starts the server
 
 #### Video
 
-https://github.com/corhydare/DontReadThis/blob/main/video
+
+
+https://user-images.githubusercontent.com/57278348/161473114-5e7fee8f-a1cc-4322-aafd-4b2d7a699a03.mp4
+
+
 
 ## Licenses
 
